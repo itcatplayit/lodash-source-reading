@@ -1,0 +1,31 @@
+{
+  "name": "lodash-source-reading",
+  "version": "0.0.1",
+  "description": "lodash源码解析",
+  "keywords": [
+    "lodash",
+    "源码解析",
+    "lodash tutorial",
+    "tutorial"
+  ],
+  "homepage": "https://github.com/itcatplayit/lodash-source-reading",
+  "bugs": {
+    "url": "https://github.com/itcatplayit/lodash-source-reading/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itcatplayit/lodash-source-reading.git"
+  },
+  "license": "MIT",
+  "author": "itcatplayit <itcatplayit@163.com>",
+  "devDependencies": {
+    "markdown-it-sup": "^1.0.0",
+    "vitepress": "1.0.0-beta.1",
+    "vitepress-markdown-it-repl": "^0.1.1"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}

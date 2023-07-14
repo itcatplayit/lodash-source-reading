@@ -1,0 +1,41 @@
+# s1e001: 准备工作
+
+## 软件及语言安装
+
+- [vscode 下载](https://code.visualstudio.com/Download)
+- [nodejs](https://nodejs.org/en/download)
+
+## 全局安装`nrm`和`pnpm`
+
+```sh
+# nrm是前端切换包下载镜像源的工具；pnpm是有缓存的下载更快的包管理器
+npm i -g nrm pnpm
+```
+
+## 下载相关仓库源码
+
+```sh
+# 在某个目录下，如lodash-learn
+mkdir lodash-learn
+git clone https://github.com/lodash/lodash
+git clone https://github.com/lodash/lodash-cli
+git clone https://github.com/itcatplayit/lodash-source-reading
+```
+
+## 安装node版本管理工具（可选）
+
+windows下安装[`nvm`](https://github.com/coreybutler/nvm-windows)，mac下安装[`n`](https://github.com/tj/n)。自行点击前面链接下载安装。这里不赘述。
+
+## 用`vscode`打开整个目录`lodash-learn`。
+
+```cmd
+# 如果安装vscode时有添加code命令到环境中，可在终端中使用下面命令打开；如果没有，则直接拖拽整个目录到vscode编辑器中。
+code .
+```
+
+## 安装一些`vscode`插件
+
+- `Dependency Cruiser Extension `
+- `Svg Preview`
+
+安装方法可参阅视频[前端依赖文件可视化——看源码必备](https://www.bilibili.com/video/BV1ws4y1F75B/)。
