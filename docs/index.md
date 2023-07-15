@@ -10,7 +10,7 @@ hero:
       link: /articles/architecture
     - theme: alt
       text: 从0到1
-      link: /seasons/s1e001/index
+      link: /seasons/s1e001
 
 features:
   - title: '最全'

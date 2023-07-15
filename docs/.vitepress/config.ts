@@ -7,12 +7,16 @@ export default defineConfig({
   cleanUrls: true,
   title: "lodash源码解析",
   description: "lodash源码解析，从0到1",
+  returnToTopLabel: '回到顶部',
+  // rewrites: {
+    // 'seasons/:pkg/index.md': 'seasons/:pkg.md',
+  // },
   themeConfig: {
     search: {
       provider: 'local',
       options: {
         locales: {
-          zh_cn: {
+          root: {
             translations: {
               button: {
                 buttonText: '搜索文档',
@@ -34,34 +38,45 @@ export default defineConfig({
     },
     // i18nRouting: true,
     logo: '/lodash.svg',
-    outline: [1, 3],
-    editLink: {
-      pattern: 'https://github.com/itcatplayit/esbuild-tutorial/edit/main/docs/:path',
-      // text: '在 GitHub 上编辑此页面',
-    },
+    outline: [1, 4],
     nav: [
-      { text: '文章', link: '/articles/architecture' },
-      { text: '从0到1', link: '/seasons/s1e001/index' },
+      { text: '文章', link: '/articles/architecture', activeMatch: '/articles/', },
+      { text: '从0到1', link: '/seasons/s1e001', activeMatch: '/seasons/', },
     ],
     sidebar: [
       {
         text: '文章',
+        // collapsed: true,
         items: [
           { text: '架构', link: '/articles/architecture', activeMatch: '/articles/', },
         ]
       },
       {
-        text: '从0到1', 
+        text: '从0到1',
+        // collapsed: true,
         items: [
-          { text: 's1e001', link: '/seasons/s1e001/index', activeMatch: '/seasons/', },
-          { text: 's1e002', link: '/seasons/s1e002/index', activeMatch: '/seasons/', },
+          { text: 's1e001', link: '/seasons/s1e001', activeMath: '/seasons/', },
+          { text: 's1e002', link: '/seasons/s1e002', activeMath: '/seasons/', },
         ]
       }
     ],
 
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
     footer: {
-      message: 'Released under the <a href="https://github.com/itcatplayit/esbuild-tutorial/blob/main/LICENSE">MIT License</a>.',
-      copyright: 'Copyright © 2022-present <a href="https://github.com/itcatplayit">itcatplayit</a>',
+      message: '<a href="https://github.com/itcatplayit/lodash-source-reading/blob/master/LICENSE">MIT 开源协议</a>.',
+      copyright: '版权 © 2022-至今 <a href="https://github.com/itcatplayit">itcatplayit</a>',
+    },
+    darkModeSwitchLabel: '亮暗切换',
+    // sidebarMenuLabel: 'Menu',
+    returnToTopLabel: '回到顶部',
+    outlineTitle: '页面导航',
+    lastUpdatedText: '最后更新于',
+    editLink: {
+      pattern: 'https://github.com/itcatplayit/lodash-source-reading/edit/master/docs/:path',
+      text: '在 GitHub 上编辑此页面',
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/itcatplayit/lodash-source-reading' }
