@@ -9,6 +9,14 @@ export default defineConfig({
   title: "lodash源码解析",
   description: "lodash源码解析，从0到1",
   returnToTopLabel: '回到顶部',
+  head: [
+    [
+      'link', { href: '/lodash.svg', type: 'image/svg+xml' },
+    ],
+    [
+      'link', { href: "https://lodash.com/icons/favicon-32x32.png", rel: "icon", sizes: "32x32", type: "image/png" }
+    ]
+  ],
   themeConfig: {
     search: {
       provider: 'local',
