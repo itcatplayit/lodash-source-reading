@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { default as replPlugin } from 'vitepress-markdown-it-repl'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,9 +9,6 @@ export default defineConfig({
   title: "lodash源码解析",
   description: "lodash源码解析，从0到1",
   returnToTopLabel: '回到顶部',
-  // rewrites: {
-    // 'seasons/:pkg/index.md': 'seasons/:pkg.md',
-  // },
   themeConfig: {
     search: {
       provider: 'local',
@@ -55,8 +53,19 @@ export default defineConfig({
         text: '从0到1',
         // collapsed: true,
         items: [
-          { text: 's1e001', link: '/seasons/s1e001', activeMath: '/seasons/', },
-          { text: 's1e002', link: '/seasons/s1e002', activeMath: '/seasons/', },
+          { text: 's1e001: 准备工作', link: '/seasons/s1e001', activeMath: '/seasons/', },
+          { text: 's1e002: 部分函数的使用', link: '/seasons/s1e002', activeMath: '/seasons/', },
+          { text: 's1e003: lodash-cli的使用', link: '/seasons/s1e003', activeMath: '/seasons/', },
+        ]
+      },
+      {
+        text: '相关链接',
+        collapsed: true,
+        items: [
+          { text: 'lodash官网', link: 'https://lodash.com/' },
+          { text: 'lodash中文官网', link: 'https://www.lodashjs.com/' },
+          { text: 'lodash github', link: 'https://github.com/lodash/lodash' },
+          { text: 'lodash-cli github', link: 'https://github.com/lodash/lodash-cli' },
         ]
       }
     ],
@@ -81,5 +90,12 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/itcatplayit/lodash-source-reading' }
     ]
+  },
+  markdown: {
+    theme: 'material-theme-palenight',
+    lineNumbers: true,
+    config: md => { 
+      md.use(replPlugin, { globalEnabledLineNumbers: true })
+    },
   },
 })
